@@ -172,7 +172,7 @@ osm_search <- function(query,
 
     ret <- content(res)
 
-    if (length(ret) == 0) return(NULL)
+    if (length(ret) == 0) return("N/A")
 
     return(bind_rows(lapply(1:length(ret), function(i) {
 
