@@ -152,7 +152,7 @@ osm_search <- function(query,
     if (!is.null(email)) param_base <- sprintf("%s&email=%s", param_base, curl::curl_escape(email))
     if (!is.null(accept_language)) param_base <- sprintf("%s&accept-language=%s", param_base, curl::curl_escape(accept_language))
     param_base <- sprintf("%s&key=%s", param_base, key)
-    param_base <- sprintf("%s&address_details=%d", param_base, as.numeric(address_details))
+    param_base <- sprintf("%s&addressdetails=%d", param_base, as.numeric(address_details))
     param_base <- sprintf("%s&limit=%d", param_base, as.numeric(limit))
     param_base <- sprintf("%s&q=%s", param_base, gsub(" ", "+", query[i]))
 
