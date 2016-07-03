@@ -172,7 +172,8 @@ osm_search <- function(query,
 
     ret <- content(res)
 
-    if (length(ret) == 0) return("N/A")
+    if (length(ret) == 0) return(data.frame(place_id="", licence="", osm_type="", osm_id="", icon="", lat="", lon="", 
+                                  display_name="", class="", type="", importance=""))
 
     return(bind_rows(lapply(1:length(ret), function(i) {
 
