@@ -167,7 +167,7 @@ osm_search <- function(query,
 .search <- function(search_base, params) {
 
   tryCatch({
-
+    print(search_base, params)
     res <- GET(search_base, query=params, timeout(getOption("NOMINATIM.TIMEOUT")))
     stop_for_status(res)
 
