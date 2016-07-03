@@ -73,7 +73,7 @@ osm_geocode <- function(query,
     if (!is.null(exclude_place_ids)) params <- sprintf("%s&exclude_place_ids=%s", params, exclude_place_ids)
     if (!is.null(email)) params <- sprintf("%s&email=%s", params, curl::curl_escape(email))
     if (!is.null(accept_language)) params <- sprintf("%s&accept-language=%s", params, curl::curl_escape(accept_language))
-    params <- sprintf("%s&address_details=%d", params, as.numeric(address_details))
+    params <- sprintf("%s&addressdetails=%d", params, as.numeric(address_details))
     params <- sprintf("%s&limit=%d", params, as.numeric(limit))
     params <- sprintf("%s&key=%s", params, key)
 
